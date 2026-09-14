@@ -1,7 +1,7 @@
 # biblioteca_trab
 
 *Alunas:* Eliza Cancelier Fragnani.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analuz Ramos Barros.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analuz Ramos Barros.
 
 As tabelas do projeto são:
 
