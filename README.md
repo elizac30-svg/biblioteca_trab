@@ -3,7 +3,7 @@
 *Alunas:* Eliza Cancelier Fragnani.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analuz Ramos Barros.
 
-*As tabelas do projeto são:*
+*As tabelas do projeto são:*   
 **usuarios**(*id, nome*)  
 **editoras**(*id, nome*)   
 **autores**(*id, nome*)  
