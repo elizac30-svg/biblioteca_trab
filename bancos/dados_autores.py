@@ -5,7 +5,7 @@ conn.execute("CREATE TABLE autores (id INTEGER PRIMARY KEY AUTOINCREMENT, nome T
 
 def cadastrar_autor (nome):
 
-    conn.execute("INSERT INTO AUTORES(nome) VALUES(?)", 
+    conn.execute("INSERT INTO autores(nome) VALUES(?)", 
                  (nome))
     
     conn.commit ()
