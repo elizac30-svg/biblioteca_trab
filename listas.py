@@ -2,7 +2,6 @@ def lista_usuarios():
 
     import sqlite3 as sqlite
 
-
     conn = sqlite.connect("biblioteca_trab/zbiblioteca.db")
     conn.row_factory = sqlite.Row
 
