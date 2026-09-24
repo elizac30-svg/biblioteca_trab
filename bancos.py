@@ -22,13 +22,14 @@ def tab_livros():
 
 def tab_emprestimos():
 
-    conn.execute("CREATE TABLE IF NOT EXISTS emprestimos(id INTEGER PRIMARY KEY AUTOINCREMENT, data_emprestimo DATE,
-             "usuario_id INTEGER REFERENCES usuarios(id))")
+    conn.execute("CREATE TABLE IF NOT EXISTS emprestimos(id INTEGER PRIMARY KEY AUTOINCREMENT, data_emprestimo DATE,"
+                 "usuario_id INTEGER REFERENCES usuarios(id))")
+
 
 #*emprestimos_livros*(emprestimo_id, livro_id, data_devolucao)
 def tab_emprestimos_livros():
 
-    conn.execute("")
+    conn.execute("data_devolucao DATE, usuario_id INTEGER REFERENCES emprestimo(id), livro_id INTEGER REFERENCES livro(id) ")
 
 
 tab_autores()
