@@ -20,6 +20,10 @@ def tab_livros():
              "autor_id INTEGER REFERENCES autores(id), " \
              "editora_id INTEGER REFERENCES editoras(id))")
 
+def tab_emprestimos():
+
+    conn.execute("CREATE TABLE IF NOT EXISTS emprestimos(id INTEGER PRIMARY KEY AUTOINCREMENT, data DATE)")
+
 tab_autores()
 tab_editoras()
 tab_usuarios()
