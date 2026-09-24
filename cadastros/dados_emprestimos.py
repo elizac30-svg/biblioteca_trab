@@ -1,9 +1,3 @@
-'''adicionar
-    if resultado is None:
-        print("Empréstimo não encontrado.")
-        conn.close()
-        return'''
-
 import sqlite3
 from datetime import datetime
 
@@ -20,6 +14,10 @@ def cadastrar_emprestimos(data_emprestimo, usuario_id, nome_usuario):
     (nome_usuario))
 
     resultado = cursor.fechone()
+    if resultado is None:
+            print("Empréstimo não encontrado.")
+            conn.close()
+            return
     usuario_id = resultado['id']
 
     conn.execute("INSERT INTO emprestimos(data) VALUES (?, ?)",

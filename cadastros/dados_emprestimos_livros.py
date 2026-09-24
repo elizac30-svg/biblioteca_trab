@@ -19,7 +19,6 @@ def cadastrar_emprestimos_livros(emprestimo_id, data_emprestimo, titulo_livro):
         print("Empréstimo não encontrado.")
         conn.close()
         return
-    
     emprestimo_id = resultado['id']
 
     cursor.execute("SELECT id FROM livros WHERE titulo = ?",
@@ -30,7 +29,6 @@ def cadastrar_emprestimos_livros(emprestimo_id, data_emprestimo, titulo_livro):
             print("Empréstimo não encontrado.")
             conn.close()
             return
-    
     livro_id = resultado['id']
 
     conn.execute("INSERT INTO emprestimos_livros(emprestimo_id, livro_id, data_devolucao) " \
