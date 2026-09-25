@@ -10,7 +10,10 @@ from cadastros.dados_usuarios import cadastrar_usuarios
 
 def menu():
     while(True):
-        print("\n---- MEHNUZIHTHOY ----")
-        print("\n")
+        print("\n---- M E N U Z I N H O  de  O P Ç Õ E S  ! ! ! ----")
+        print("\n[1] - Opções de listas.")
+        print("[2] - Opções de cadastro.")
+        print("[3] - Sair )")
 
-    
+
+menu()
