@@ -1,4 +1,3 @@
-#*emprestimos_livros*(emprestimo_id, livro_id, data_devolucao)
 import sqlite3
 from datetime import datetime, timedelta
 
@@ -35,9 +34,7 @@ def cadastrar_emprestimos_livros(emprestimo_id, data_emprestimo, titulo_livro):
                  "VALUES (?, ?, ?)",
                  (emprestimo_id, livro_id, data_devolucao))
 
+    conn.execute("UPDATE livros SET disponivel = False WHERE id = ?", (livro_id,) )
+
     conn.commit()
     conn.close()
-
-
-
-    

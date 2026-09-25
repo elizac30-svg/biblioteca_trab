@@ -12,9 +12,10 @@ def cadastrar_livros(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     resultado = cursor.fetchone()
     if resultado is None:
-            print("Empréstimo não encontrado.")
+            print("Editora não encontrada.")
             conn.close()
             return
+    
     editora_id = resultado['id']
 
     cursor.execute("SELECT id FROM autores WHERE nome = ?",
@@ -22,7 +23,7 @@ def cadastrar_livros(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     resultado = cursor.fetchone()
     if resultado is None:
-            print("Empréstimo não encontrado.")
+            print("Autor não encontrado.")
             conn.close()
             return
     autor_id = resultado['id']
@@ -33,3 +34,4 @@ def cadastrar_livros(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     conn.commit()
     conn.close()
+    

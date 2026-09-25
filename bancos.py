@@ -27,7 +27,8 @@ def tab_emprestimos():
 
 def tab_emprestimos_livros():
 
-    conn.execute("data_devolucao DATE, usuario_id INTEGER REFERENCES emprestimo(id), livro_id INTEGER REFERENCES livro(id) ")
+    conn.execute("data_devolucao DATE, usuario_id INTEGER REFERENCES emprestimo(id), " \
+                 "livro_id INTEGER REFERENCES livro(id) ")
 
 
 tab_autores()

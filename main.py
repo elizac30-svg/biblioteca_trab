@@ -1,15 +1,16 @@
 from listas import lista_usuarios
 from cadastros.dados_usuarios import cadastrar_usuarios
 
-resposta = input("testeeeee")
+'''*usuarios*(id, nome)
+*autores*(id, nome)
+*editoras*(id, nome)
+*livros*(id, titulo, edicao, ano_publicacao, disponivel, editora_id, autor_id)
+*emprestimos*(id, data_emprestimos, usuario_id)
+*emprestimos_livros*(data_devolucao, emprestimo_id, livro_id)'''
 
-if resposta == '1':
-    lista_usuarios ()
+def menu():
+    while(True):
+        print("\n---- MEHNUZIHTHOY ----")
+        print("\n")
 
-elif resposta == '2':
-            nome = input("Nome do cliente: ")
-            cadastrar_usuarios(nome)
-
-else:
-    print("\n[Opção Inválida]")
-
+    
