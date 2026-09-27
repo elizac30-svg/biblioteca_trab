@@ -1,7 +1,7 @@
 # biblioteca_trab
 
 *Alunas:* Eliza Cancelier Fragnani.  
-          Analuz Ramos Barros.
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAnaluz Ramos Barros.
 
 Implementação do exemplo clássico da Biblioteca salvando os dados em um banco de dados sqlite.
 
