@@ -8,7 +8,8 @@ def cadastrar_emprestimo_livro(emprestimo_id, data_emprestimo, titulo_livro):
 
     cursor = conn.cursor()
 
-    data_devolucao = data_emprestimo + timedelta(days= 30)
+    data_devolucao = data_emprestimo + timedelta(days= 30) #assim a data de devolução fica automaticamente 
+                                                           #para 30 dias depois da data de emprestimo
 
     cursor.execute("SELECT id FROM emprestimos WHERE id = ?",
     (emprestimo_id,))

@@ -8,7 +8,7 @@ def cadastrar_emprestimo(data_emprestimo, usuario_id, nome_usuario):
 
     cursor = conn.cursor()
 
-    data_emprestimo = datetime.now().isoformat()
+    data_emprestimo = datetime.now().isoformat() #gera a data automaticamente 
 
     cursor.execute("SELECT id FROM usuarios WHERE nome = ?",
     (nome_usuario))

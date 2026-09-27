@@ -1,9 +1,13 @@
 from listas import (lista_usuarios, lista_autores, lista_editoras, 
 lista_livros, lista_emprestimos, lista_emprestimo_livros)
-from cadastros.dados_usuarios import (cadastrar_usuario, cadastrar_autor, cadastrar_editora,
-cadastrar_livro, cadastrar_emprestimo, cadastrar_emprestimo_livro)
+from cadastros.dados_usuarios import cadastrar_usuario
+from cadastros.dados_autores import cadastrar_autor
+from cadastros.dados_editoras import  cadastrar_editora
+from cadastros.dados_livros import cadastrar_livro
+from cadastros.dados_emprestimos import cadastrar_emprestimo
+from cadastros.dados_emprestimos_livros import cadastrar_emprestimo_livro
 
-import sqlite3 as sqlite
+import sqlite3
 
 def menu():
     while(True):
