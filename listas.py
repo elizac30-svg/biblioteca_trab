@@ -9,7 +9,7 @@ def lista_usuarios():
 
     cursor.execute("SELECT * FROM usuarios")
 
-    resultados = cursor.fetchone()
+    resultados = cursor.fetchall()
 
     if not resultados:
         print("[LISTA VAZIA]")
@@ -97,7 +97,7 @@ def lista_emprestimos():
         
     cursor = conn.cursor()
     
-    cursor.execute("SELECT * FROM emprestimo")
+    cursor.execute("SELECT * FROM emprestimos")
         
     resultados = cursor.fetchall()
         
@@ -121,7 +121,7 @@ def lista_emprestimo_livros():
         
     cursor = conn.cursor()
     
-    cursor.execute("SELECT * FROM emprestimo")
+    cursor.execute("SELECT * FROM emprestimos_livros")
         
     resultados = cursor.fetchall()
         
