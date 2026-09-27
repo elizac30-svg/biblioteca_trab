@@ -27,14 +27,16 @@ def tab_emprestimos():
 
 def tab_emprestimos_livros():
 
-    conn.execute("data_devolucao DATE, usuario_id INTEGER REFERENCES emprestimo(id), " \
-                 "livro_id INTEGER REFERENCES livro(id) ")
+    conn.execute("CREATE TABLE IF NOT EXISTS emprestimos_livros (data_devolucao DATE, usuario_id INTEGER REFERENCES emprestimo(id), " \
+                 "livro_id INTEGER REFERENCES livro(id))")
 
 
 tab_autores()
 tab_editoras()
 tab_usuarios()
 tab_livros()
+tab_emprestimos()
+tab_emprestimos_livros()
 
 conn.commit()
 conn.close()
