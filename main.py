@@ -14,7 +14,7 @@ def menu():
         print("\n---- M E N U Z I N H O  de  O P Ç Õ E S  ! ! ! ----") 
         print("\n[1] - Opções de listas.")
         print("[2] - Opções de cadastro.")
-        print("[3] - Sair )")
+        print("[3] - Sair.")
 
         opcao = input("Digite a opção desejada: ")
 
