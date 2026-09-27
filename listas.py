@@ -12,7 +12,7 @@ def lista_usuarios():
     resultados = cursor.fetchall()
 
     if not resultados:
-        print("[LISTA VAZIA]")
+        print("\n[LISTA VAZIA]")
 
     else:
         for linha in resultados:
@@ -34,7 +34,7 @@ def lista_autores():
     resultados = cursor.fetchall()
 
     if not resultados:
-        print("[LISTA VAZIA]")
+        print("\n[LISTA VAZIA]")
 
     else:
         for linha in resultados:
@@ -56,7 +56,7 @@ def lista_editoras():
     resultados = cursor.fetchall()
     
     if not resultados:
-        print("[LISTA VAZIA]")
+        print("\n[LISTA VAZIA]")
     
     else:
         for linha in resultados:
@@ -78,7 +78,7 @@ def lista_livros():
     resultados = cursor.fetchall()
         
     if not resultados:
-        print("[LISTA VAZIA]")
+        print("\n[LISTA VAZIA]")
         
     else:
         for linha in resultados:
@@ -102,7 +102,7 @@ def lista_emprestimos():
     resultados = cursor.fetchall()
         
     if not resultados:
-        print("[LISTA VAZIA]")
+        print("\n[LISTA VAZIA]")
         
     else:
         for linha in resultados:
@@ -126,7 +126,7 @@ def lista_emprestimo_livros():
     resultados = cursor.fetchall()
         
     if not resultados:
-        print("[LISTA VAZIA]")
+        print("\n[LISTA VAZIA]")
         
     else:
         for linha in resultados:
