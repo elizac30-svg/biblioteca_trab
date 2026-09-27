@@ -16,7 +16,7 @@ def tab_usuarios():
 def tab_livros():
 
     conn.execute("CREATE TABLE IF NOT EXISTS livros (id INTEGER PRIMARY KEY AUTOINCREMENT, titulo TEXT NOT NULL," \
-             "edicao INTEGER NOT NULL, disponivel BOOLEAN, ano_publicacao INTEGER, " \
+             "edicao INTEGER NOT NULL, disponivel BOOLEAN DEFAULT TRUE, ano_publicacao INTEGER, " \
              "autor_id INTEGER REFERENCES autores(id), " \
              "editora_id INTEGER REFERENCES editoras(id))")
 

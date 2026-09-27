@@ -1,6 +1,6 @@
 import sqlite3
 
-def cadastrar_usuarios(nome):
+def cadastrar_usuario(nome):
 
     conn = sqlite3.connect("biblioteca_trab/zbiblioteca.db")
 

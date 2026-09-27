@@ -1,62 +1,115 @@
-from listas import lista_usuarios
-from cadastros.dados_usuarios import cadastrar_usuarios
+from listas import (lista_usuarios, lista_autores, lista_editoras, 
+lista_livros, lista_emprestimos, lista_emprestimo_livros)
+from cadastros.dados_usuarios import (cadastrar_usuario, cadastrar_autor, cadastrar_editora,
+cadastrar_livro, cadastrar_emprestimo, cadastrar_emprestimo_livro)
 
-'''*usuarios*(id, nome)
-*autores*(id, nome)
-*editoras*(id, nome)
-*livros*(id, titulo, edicao, ano_publicacao, disponivel, editora_id, autor_id)
-*emprestimos*(id, data_emprestimos, usuario_id)
-*emprestimos_livros*(data_devolucao, emprestimo_id, livro_id)'''
+import sqlite3 as sqlite
 
 def menu():
     while(True):
-        print("\n---- M E N U Z I N H O  de  O P Ç Õ E S  ! ! ! ----") #menu 0
+        print("\n---- M E N U Z I N H O  de  O P Ç Õ E S  ! ! ! ----") 
         print("\n[1] - Opções de listas.")
         print("[2] - Opções de cadastro.")
         print("[3] - Sair )")
 
         opcao = input("Digite a opção desejada: ")
-        #obs para Luz: Apenas um teste, modifique depois e faz o resto como quiser *figuriha q eu to pensando*
 
         if opcao == '1':
             while True:
 
-                print("\nmenuh lá das listinha") #menu 1
-                print("finge que existem opções aqui")
-                opcao_l = input("responde ai: ")
+                print("\n--MENU DAS LISTAS--") 
+                print("[1] - Listar Autores.")
+                print("[2] - Listar Editoras.")
+                print("[3] - Listar Usuários.")
+                print("[4] - Listar Livros.")
+                print("[5] - Listar Emprestimos.")
+                print("[6] - Listar Livros dos Emprestimos.")
+                print('[7] - Voltar para o Menu Inicial.')
+
+                opcao_l = input("Digite a opção desejada: ")
             
-                if opcao_l == '1':#depois de executar volta pro mennu 1 por causa do while True:
-                    print("blablabla")
-                elif opcao_l == '2': #isso faz voltar para o menu 0
+                if opcao_l == '1':
+                    lista_autores()
+                elif opcao_l == '2': 
+                    lista_editoras()
+                elif opcao_l == '3':
+                    lista_usuarios()
+                elif opcao_l == '4':
+                    lista_livros()
+                elif opcao_l == '5':
+                    lista_emprestimos()
+                elif opcao_l == '6':
+                    lista_emprestimo_livros()
+                elif opcao_l == '7':
                     break
                 else: 
-                    print("\ncoiso inavlido, ache uma bola de cristal para adivinhar as alternativas seu " \
-                    "burro, nao tem ainda pq? eoenn")
+                    print("\n[Opção Inválida]")
 
         elif opcao == '2':
             while True:
 
-                print("só pra falar q tem as opcoes lá")
-                opcao_c = input('AAAaa?: ')
+                print("---MENU DOS CADASTROS---")
+                print("[1] - Cadastrar Autores.")
+                print("[2] - Cadastrar Editoras.")
+                print("[3] - Cadastrar Usuários.")
+                print("[4] - Cadastrar Livros.")
+                print("[5] - Cadastrar Empréstimos.")
+                print("[6] - Cadastrar Livros dos Empréstimos.")
+                print('[7] - Voltar para o Menu Inicial.')
+
+                opcao_c = input("Digite a opção desejada: ")
+
                 if opcao_c == '1':
+                    nome = input("\nInsira o nome do Autor: ")
+                    cadastrar_autor(nome)
+                    print("\nAutor Cadastrado com Sucesso!")
+
+                elif opcao_c == '2':
+                    nome = input("\nInsira o nome da Editora: ")
+                    cadastrar_editora(nome)
+                    print("\nEditora Cadastrada com Sucesso!")
+
+                elif opcao_c == '3':
+                    nome = input("\nInsira o nome do Usuário: ")
+                    cadastrar_usuario(nome)
+                    print("\nUsuário Cadastrado com Sucesso!")
+
+                elif opcao_c == '4':
+                    titulo = input("\nInsira o Título do Livro: ")
+                    edicao = int(input("Insira qual a Edição do Livro: "))
+                    ano_publicacao = int(input("Insira o Ano de Publicação: "))
+                    editora_id = input("Insira o Nome da Editora desejada: ")
+                    autor_id = input("Insira o Nome do Autor desejado: ")
+                    cadastrar_livro(titulo, edicao, ano_publicacao, editora_id, autor_id)
+                    print("\nLivro Cadastrado com Sucesso!")
+
+                elif opcao_c == '5':
+                    usuario_id = input("\nInsira o Usuário desejado: ")
+                    cadastrar_emprestimo(usuario_id)
+                    print("'\nEmpréstimo Cadastrado com Sucesso!")
+
+                elif opcao_c == '6':
+                    emprestimo_id = int(input("\nInsira o 'Id' do Empréstimo Desejado: "))
+                    while True:
+                        livro_id = input("Insira o Título do Livro Desejado: ")
+                        cadastrar_emprestimo_livro(emprestimo_id, livro_id)
+                        outro = input("\nDeseja adicionar outro livro? (s/n)\n")
+
+                        if outro.lower() != 's':
+                            break
+
+                        print("\nLivro Adicionado ao Emprestimo com Sucesso!")
+
+                elif opcao_c == '7':
                     break
+
                 else:
-                    print("banana")
+                    print("\n[Opção Inválida]")
 
         elif opcao == '3':
             break
 
-        elif opcao == '67':
-            print("\nPara se diagnostico de problemas mentais e breve internamento: " \
-            "CAPS (Centro de Atenção Psicossocial): Unidades do SUS especializadas em " \
-            "saúde mental. Você pode buscar atendimento diretamente na unidade mais próxima " \
-            "da sua casa (saiba que não é necessário um agendamento prévio para o primeiro acolhimento).")
-
-        elif opcao == '666':
-            print("\nParabéns! Você acaba de invocar Samara!")
-
         else:
-            print("\nO SEU ACÉFALO DESPROVIDO DE INTELIGENCIA, SEU CORNO, ISSO NAO "
-                  "TA NAS OPÇÕES, SABE LER NAO O ESTRUPICIO!!!??????")
+            print("\n[Opção Inválida]")
 
 menu()

@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime
 
-def cadastrar_emprestimos(data_emprestimo, usuario_id, nome_usuario):
+def cadastrar_emprestimo(data_emprestimo, usuario_id, nome_usuario):
 
     conn = sqlite3.connect("biblioteca_trab/zbiblioteca.db")
     conn.row_factory = sqlite3.Row

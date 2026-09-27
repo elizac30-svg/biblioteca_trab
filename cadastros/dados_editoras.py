@@ -1,6 +1,6 @@
 import sqlite3
 
-def cadastrar_editoras(nome):
+def cadastrar_editora(nome):
 
     conn = sqlite3.connect("biblioteca_trab/zbiblioteca.db")
 

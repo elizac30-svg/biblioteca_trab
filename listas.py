@@ -9,7 +9,7 @@ def lista_usuarios():
 
     cursor.execute("SELECT * FROM usuarios")
 
-    resultados = cursor.fetchall()
+    resultados = cursor.fetchone()
 
     if not resultados:
         print("[LISTA VAZIA]")
@@ -88,7 +88,7 @@ def lista_livros():
         
     conn.close()
 
-def emprestimo():
+def lista_emprestimos():
 
     import sqlite3 as sqlite
         
@@ -112,7 +112,7 @@ def emprestimo():
     conn.close()
 
 
-def emprestimo_livros():
+def lista_emprestimo_livros():
 
     import sqlite3 as sqlite
         

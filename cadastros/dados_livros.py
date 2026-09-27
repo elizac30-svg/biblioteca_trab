@@ -1,6 +1,6 @@
 import sqlite3
 
-def cadastrar_livros(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
+def cadastrar_livro(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     conn = sqlite3.connect("biblioteca_trab/zbiblioteca.db")
     conn.row_factory = sqlite3.Row
@@ -23,7 +23,7 @@ def cadastrar_livros(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     resultado = cursor.fetchone()
     if resultado is None:
-            print("Autor não encontrado.")
+            print("\nAutor não encontrado.")
             conn.close()
             return
     autor_id = resultado['id']
