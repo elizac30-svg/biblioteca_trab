@@ -16,7 +16,7 @@ def lista_usuarios():
 
     else:
         for linha in resultados:
-            print(f"id: {linha['id']} | nome: {linha['nome']}")
+            print(f"\nid: {linha['id']} | nome: {linha['nome']}")
 
     conn.close()
 
@@ -38,7 +38,7 @@ def lista_autores():
 
     else:
         for linha in resultados:
-            print(f"id: {linha['id']} | nome: {linha['nome']}")
+            print(f"\nid: {linha['id']} | nome: {linha['nome']}")
 
     conn.close()
 
@@ -60,7 +60,7 @@ def lista_editoras():
     
     else:
         for linha in resultados:
-            print(f"id: {linha['id']} | nome: {linha['nome']}")
+            print(f"\nid: {linha['id']} | nome: {linha['nome']}")
     
     conn.close()
 
@@ -82,7 +82,7 @@ def lista_livros():
         
     else:
         for linha in resultados:
-            print(f"id: {linha['id']} | titulo: {linha['titulo']} | edicao: {linha['edicao']} " \
+            print(f"\nid: {linha['id']} | titulo: {linha['titulo']} | edicao: {linha['edicao']} " \
                   f" | disponivel: {linha['disponivel']} | ano_publicacao {linha['ano_publicacao']} "
                   f"| editora_id{linha['editora_id']} | autor_id{linha['autor_id']}")
         
@@ -106,7 +106,7 @@ def lista_emprestimos():
         
     else:
         for linha in resultados:
-            print(f"id: {linha['id']} | data_emprestimos:{linha['data_emprestimos']} "
+            print(f"\nid: {linha['id']} | data_emprestimo:{linha['data_emprestimo']} "
                 f"| usuario_id: {linha['usuario_id']} ")
         
     conn.close()
@@ -130,7 +130,7 @@ def lista_emprestimo_livros():
         
     else:
         for linha in resultados:
-            print(f"data_devolucao: {linha['data_devolucao']} | emprestimo_id:{linha['emprestimo_id']} "
+            print(f"\ndata_devolucao: {linha['data_devolucao']} | emprestimo_id:{linha['emprestimo_id']} "
                 f"| livro_id: {linha['livro_id']} ")
         
     conn.close()

@@ -90,19 +90,20 @@ def menu():
                 elif opcao_c == '5':
                     usuario_id = input("\nInsira o Usuário desejado: ")
                     if cadastrar_emprestimo(usuario_id):
-                        print("'\nEmpréstimo Cadastrado com Sucesso!")
+                        print("\nEmpréstimo Cadastrado com Sucesso!")
 
                 elif opcao_c == '6':
                     emprestimo_id = int(input("\nInsira o 'Id' do Empréstimo Desejado: "))
                     while True:
                         livro_id = input("Insira o Título do Livro Desejado: ")
+
+                        if cadastrar_emprestimo_livro(emprestimo_id, livro_id):
+                            print("\nLivro Adicionado ao Emprestimo com Sucesso!")
+
                         outro = input("\nDeseja adicionar outro livro? (s/n)\n")
 
                         if outro.lower() != 's':
                             break
-
-                        if cadastrar_emprestimo_livro(emprestimo_id, livro_id):
-                            print("\nLivro Adicionado ao Emprestimo com Sucesso!")
 
                 elif opcao_c == '7':
                     break

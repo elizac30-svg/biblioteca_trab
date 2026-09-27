@@ -34,4 +34,6 @@ def cadastrar_livro(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     conn.commit()
     conn.close()
+
+    return True
     

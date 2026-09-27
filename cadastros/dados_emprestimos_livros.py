@@ -1,12 +1,15 @@
 import sqlite3
 from datetime import datetime, timedelta
 
-def cadastrar_emprestimo_livro(emprestimo_id, data_emprestimo, titulo_livro):
+def cadastrar_emprestimo_livro(emprestimo_id, titulo_livro, data_emprestimo = None):
 
     conn = sqlite3.connect("biblioteca_trab/zbiblioteca.db")
     conn.row_factory = sqlite3.Row
 
     cursor = conn.cursor()
+
+    if data_emprestimo is None:
+        data_emprestimo = datetime.now()
 
     data_devolucao = data_emprestimo + timedelta(days= 30) #assim a data de devolução fica automaticamente 
                                                            #para 30 dias depois da data de emprestimo
@@ -39,3 +42,5 @@ def cadastrar_emprestimo_livro(emprestimo_id, data_emprestimo, titulo_livro):
 
     conn.commit()
     conn.close()
+
+    return True
