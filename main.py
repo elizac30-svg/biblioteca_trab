@@ -21,7 +21,7 @@ def menu():
         if opcao == '1':
             while True:
 
-                print("\n--MENU DAS LISTAS--") 
+                print("\n--MENU DAS LISTAS--")
                 print("[1] - Listar Autores.")
                 print("[2] - Listar Editoras.")
                 print("[3] - Listar Usuários.")
@@ -52,7 +52,7 @@ def menu():
         elif opcao == '2':
             while True:
 
-                print("---MENU DOS CADASTROS---")
+                print("\n---MENU DOS CADASTROS---")
                 print("[1] - Cadastrar Autores.")
                 print("[2] - Cadastrar Editoras.")
                 print("[3] - Cadastrar Usuários.")
