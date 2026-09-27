@@ -84,25 +84,25 @@ def menu():
                     ano_publicacao = int(input("Insira o Ano de Publicação: "))
                     editora_id = input("Insira o Nome da Editora desejada: ")
                     autor_id = input("Insira o Nome do Autor desejado: ")
-                    cadastrar_livro(titulo, edicao, ano_publicacao, editora_id, autor_id)
-                    print("\nLivro Cadastrado com Sucesso!")
+                    if cadastrar_livro(titulo, edicao, ano_publicacao, editora_id, autor_id):
+                            print("\nLivro Cadastrado com Sucesso!")
 
                 elif opcao_c == '5':
                     usuario_id = input("\nInsira o Usuário desejado: ")
-                    cadastrar_emprestimo(usuario_id)
-                    print("'\nEmpréstimo Cadastrado com Sucesso!")
+                    if cadastrar_emprestimo(usuario_id):
+                        print("'\nEmpréstimo Cadastrado com Sucesso!")
 
                 elif opcao_c == '6':
                     emprestimo_id = int(input("\nInsira o 'Id' do Empréstimo Desejado: "))
                     while True:
                         livro_id = input("Insira o Título do Livro Desejado: ")
-                        cadastrar_emprestimo_livro(emprestimo_id, livro_id)
                         outro = input("\nDeseja adicionar outro livro? (s/n)\n")
 
                         if outro.lower() != 's':
                             break
 
-                        print("\nLivro Adicionado ao Emprestimo com Sucesso!")
+                        if cadastrar_emprestimo_livro(emprestimo_id, livro_id):
+                            print("\nLivro Adicionado ao Emprestimo com Sucesso!")
 
                 elif opcao_c == '7':
                     break

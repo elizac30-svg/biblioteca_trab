@@ -15,9 +15,9 @@ def cadastrar_emprestimo(data_emprestimo, usuario_id, nome_usuario):
 
     resultado = cursor.fechone()
     if resultado is None:
-            print("Empréstimo não encontrado.")
+            print("\n[Empréstimo não encontrado.]")
             conn.close()
-            return
+            return False
     usuario_id = resultado['id']
 
     conn.execute("INSERT INTO emprestimos(data) VALUES (?, ?)",

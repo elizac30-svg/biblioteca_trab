@@ -12,9 +12,9 @@ def cadastrar_livro(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     resultado = cursor.fetchone()
     if resultado is None:
-            print("Editora não encontrada.")
+            print("\n[Editora não encontrada.]")
             conn.close()
-            return
+            return False
     
     editora_id = resultado['id']
 
@@ -23,9 +23,9 @@ def cadastrar_livro(titulo, edicao, ano_publicacao, nome_editora, nome_autor):
 
     resultado = cursor.fetchone()
     if resultado is None:
-            print("\nAutor não encontrado.")
+            print("\n[Autor não encontrado.]")
             conn.close()
-            return
+            return False
     autor_id = resultado['id']
 
     conn.execute("INSERT INTO livros (titulo, edicao, ano_publicacao, "

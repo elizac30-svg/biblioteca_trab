@@ -16,9 +16,9 @@ def cadastrar_emprestimo_livro(emprestimo_id, data_emprestimo, titulo_livro):
     
     resultado = cursor.fetchone()
     if resultado is None:
-        print("Empréstimo não encontrado.")
+        print("\n[Empréstimo não encontrado.]")
         conn.close()
-        return
+        return False
     emprestimo_id = resultado['id']
 
     cursor.execute("SELECT id FROM livros WHERE titulo = ?",
@@ -26,9 +26,9 @@ def cadastrar_emprestimo_livro(emprestimo_id, data_emprestimo, titulo_livro):
 
     resultado = cursor.fetchone()
     if resultado is None:
-            print("Empréstimo não encontrado.")
+            print("\n[Empréstimo não encontrado.]")
             conn.close()
-            return
+            return False
     livro_id = resultado['id']
 
     conn.execute("INSERT INTO emprestimos_livros(emprestimo_id, livro_id, data_devolucao) " \
