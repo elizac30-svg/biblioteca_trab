@@ -114,6 +114,12 @@ def menu():
         elif opcao == '3':
             break
 
+        elif opcao == '666':
+            "Parabéns, você acaba de invocar Samara! (nossa amiga apelidada de capeta)"
+
+        elif opcao == '67':
+            print("\n Para seu diagnóstico e breve internação: (vou pegar quando chegar em casa)")
+
         else:
             print("\n[Opção Inválida]")
 
