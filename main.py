@@ -114,11 +114,16 @@ def menu():
         elif opcao == '3':
             break
 
+            #easter eggs abaixo:
+
         elif opcao == '666':
-            "Parabéns, você acaba de invocar Samara! (nossa amiga apelidada de capeta)"
+            print("\nParabéns, você acaba de invocar Samara! (nossa amiga apelidada de capeta)")
 
         elif opcao == '67':
-            print("\n Para seu diagnóstico e breve internação: (vou pegar quando chegar em casa)")
+            print("\n Para seu diagnóstico e breve internação: CAPS (Centro de Atenção" \
+            "Psicossocial): Unidades especializadas em saúde mental. Você pode buscar atendimento" \
+            "diretamente na unidade mais próxima da sua casa (saiba que não é necessário um agendamento" \
+            "prévio para o primeiro atendimento).")
 
         else:
             print("\n[Opção Inválida]")

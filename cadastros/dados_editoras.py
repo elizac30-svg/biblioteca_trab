@@ -9,4 +9,3 @@ def cadastrar_editora(nome):
 
     conn.commit()
     conn.close()
-    
